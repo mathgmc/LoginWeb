@@ -14,7 +14,7 @@ class App extends Component {
         <h1 className="App-title">Login Portal</h1>
       </header>
 
-      <UserForm getUser={httpUser.getUser}/>
+      <UserForm registerUser={httpUser.registerUser}/>
     </div>);
   }
 }
