@@ -1,0 +1,24 @@
+
+.App {
+  text-align: center;
+}
+
+.inputFields {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.App-header {
+  background-color: #222;
+  height: 100px;
+  padding: 20px;
+  border-radius: 10px;
+  color: Blue;
+  margin-bottom: 10px;
+}
+
+.App-intro {
+  font-size: large;
+}
