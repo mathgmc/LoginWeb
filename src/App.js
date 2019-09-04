@@ -1,28 +1,26 @@
 import React, {Component} from 'react';
 
-import HttpService from './services/htttp_service';
-
-import RegisterUserForm from './components/register_user_form';
-import LoginUserForm from './components/login_user_form'
-
+import RegisterPage from './pages/registerpage';
+import LoginPage from './pages/loginpage'
 import './App.css';
 
-
-const httpUser = new HttpService()
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+  Redirect
+} from 'react-router-dom'
 
 class App extends Component {
   render() {
     return (
-    <div className="container App">
-
-      <header className="App-header">
-        <h1 className="App-title">Login Portal</h1>
-      </header>
-
-      <RegisterUserForm registerUser={httpUser.registerUser}/>
-      <LoginUserForm registerUser={httpUser.registerUser}/>
-
-    </div>);
+      <Router>
+        <Route path="/Login" component={LoginPage}></Route>
+        <Route path="/Register" component={RegisterPage}></Route>
+        <Redirect to="/Login"></Redirect>
+      </Router>
+    );
   }
 }
 
